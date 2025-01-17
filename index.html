@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TS to MP4 Converter</title>
+    <style>
+      :root {
+        --primary-color: #4caf50;
+        --secondary-color: #ffffff;
+        --background-color: #f0f0f0;
+        --text-color: #333333;
+        --button-hover-color: #45a049;
+        --border-radius: 5px;
+        --padding: 10px 20px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: var(--background-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: var(--secondary-color);
+        padding: 40px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 400px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        color: var(--text-color);
+        font-size: 24px;
+      }
+
+      button {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: var(--padding);
+        margin-top: 15px;
+        width: 100%;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: var(--button-hover-color);
+      }
+
+      button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      p {
+        margin-top: 15px;
+        color: var(--text-color);
+        font-size: 14px;
+        word-break: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TS to MP4 Converter</h1>
+      <button id="select-folder">Chọn thư mục</button>
+      <p id="folder-path">Chưa chọn thư mục</p>
+      <button id="convert" disabled>Chuyển đổi</button>
+      <p id="status"></p>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
